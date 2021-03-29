@@ -1,0 +1,668 @@
+body {
+    margin: 0;
+}
+
+header {
+    min-height: 6vh;
+    background-color: lightgray;
+    padding-left: 1%;
+}
+
+nav {
+    text-align: center;
+    margin-top: 0.8%;
+    margin-right: 1%;
+    padding-right: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav1 {
+    border-right: inset 2px;
+}
+
+.mobileHeader {
+    font-size: 40pt;
+    min-height: 6vh;
+    padding-left: 2%;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: lightgrey;
+    /* Fallback color */
+    background-color: rgba(211, 211, 211, 0.8);
+    /* Black w/ opacity */
+}
+
+.head2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-right: none;
+}
+
+.nav2 {
+    text-align: left;
+    margin: 1%;
+    border-top: inset 1px;
+    padding-top: 2%;
+}
+
+.close {
+    color: #000;
+    font-size: 40pt;
+    min-height: 6vh;
+    padding-left: 2%;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 1%;
+    row-gap: 1em;
+    margin: 0.4%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 40%;
+    min-height: 21vh;
+}
+
+aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 20%;
+    min-height: 21vh;
+}
+
+.blackBox {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    transition: .2s;
+    grid-template-columns: 1fr;
+}
+
+.blackOriginal {
+    background-color: black;
+    border-radius: 12px;
+    transition: .2s;
+}
+
+.redBox {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: .2s;
+    display: none;
+}
+
+.blackOriginal:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.redBox:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.box1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.redV {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.blueV {
+    background-color: blue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.box2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.TextBox {
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75pt;
+    overflow-y: scroll;
+    max-height: 6vh;
+}
+
+.box3, .box5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box4, .box6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.verticalBox {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-template-columns: 1fr;
+}
+
+.red {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.redR {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.red2 {
+    background-color: red;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.red23 {
+    background-color: red;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.red22 {
+    background-color: red;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.redB {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.azureB {
+    background-color: deepskyblue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.red3 {
+    background-color: red;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: .2s;
+}
+
+.blue {
+    background-color: blue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.blue2 {
+    background-color: blue;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.darkBlue {
+    background-color: darkblue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.darkBlue2 {
+    background-color: darkblue;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.darkBlue3 {
+    background-color: darkblue;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: .2s;
+}
+
+.azure {
+    background-color: deepskyblue;
+    border-radius: 12px;
+    transition: .2s;
+}
+
+.azureBig {
+    display: none;
+}
+
+.azure2 {
+    background-color: deepskyblue;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    transition: .2s;
+}
+
+.red:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.redR:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.redV:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.red2:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.red23:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.red22:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.red3:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.blue:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.blueV:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.blue2:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.darkBlue:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.darkBlue2:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.darkBlue3:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.azure:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+.azure2:hover {
+    transform: scale(1.2) translateX(30px);
+}
+
+.azure3:hover {
+    transform: scale(1.2) translateX(-30px);
+}
+
+/* Tablets & under */
+
+@media(max-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1%;
+        row-gap: 1em;
+        margin: 0.4%;
+    }
+    header {
+        display: none;
+    }
+    .mobileHeader {
+        display: inline-block;
+    }
+    .redBox {
+        display: inline-grid;
+    }
+    .blackOriginal {
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .azure {
+        display: none;
+    }
+    .box1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        transition: .2s;
+        grid-template-columns: 1fr;
+        grid-auto-flow: dense;
+    }
+    .redV {
+        background-color: red;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 0;
+        transition: .2s;
+        grid-row-start: 2;
+    }
+    .blueV {
+        background-color: blue;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 0;
+        transition: .2s;
+        grid-row-start: 1;
+    }
+    .box2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .TextBox {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        font-size: 65pt;
+        padding-top: 1vh;
+        padding-bottom: 6vh;
+        color: blue;
+    }
+    .azureBig {
+        display: inline-grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .box3 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .box4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .blue {
+        grid-column-start: 1;
+        grid-row: 1;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .redR {
+        grid-column-start: 2;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .verticalBox {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-template-columns: 1fr 1fr;
+    }
+    .red3 {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .darkBlue3 {
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .red22 {
+        grid-column-start: 1;
+        grid-row: 1;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .blue2 {
+        grid-column-start: 2;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .red:hover {
+        transform: none;
+    }
+    .redR:hover {
+        transform: none;
+    }
+    .redV:hover {
+        transform: none;
+    }
+    .red2:hover {
+        transform: none;
+    }
+    .red23:hover {
+        transform: none;
+    }
+    .red22:hover {
+        transform: none;
+    }
+    .red3:hover {
+        transform: none;
+    }
+    .blue:hover {
+        transform: none;
+    }
+    .blueV:hover {
+        transform: none;
+    }
+    .blue2:hover {
+        transform: none;
+    }
+    .darkBlue:hover {
+        transform: none;
+    }
+    .darkBlue2:hover {
+        transform: none;
+    }
+    .darkBlue3:hover {
+        transform: none;
+    }
+    .azure:hover {
+        transform: none;
+    }
+    .azure2:hover {
+        transform: none;
+    }
+    .azure3:hover {
+        transform: none;
+    }
+    .blackOriginal:hover {
+        transform: none;
+    }
+    .redBox:hover {
+        transform: none;
+    }
+}
+
+/* Mobiles & under */
+
+@media(max-width: 500px) {
+    .TextBox {
+        display: none;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1%;
+        row-gap: 1em;
+        margin: 0.4%;
+    }
+    .modal {
+        width: 100%;
+    }
+    .blackBox {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-template-columns: 1fr;
+        grid-template-rows: 65% 35%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        min-height: 45vh;
+    }
+    .box1 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .redV {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .blueV {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .box2 {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .darkBlue2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .red2 {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .azureBig {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .box3 {
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .darkBlue {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 12px;
+    }
+    .red {
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 0;
+    }
+    .box4 {
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .verticalBox {
+        grid-row-start: 8;
+        grid-row-end: 9;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .box5 {
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .box6 {
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

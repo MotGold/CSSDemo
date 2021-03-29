@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">Button</nav>
+        <nav class="nav1">Button</nav>
+        <nav class="nav1">Button</nav>
+        <nav class="nav1">Button</nav>
+        <nav class="nav1">Button</nav>
+    </header>
+    <div id="myBtn" class="mobileHeader">≡</div>
+    <div id="myModal" class="modal">
+        <div class="close">&times;</div>
+        <div class="head2">
+            <nav class="nav2">Button</nav>
+            <nav class="nav2">Button</nav>
+            <nav class="nav2">Button</nav>
+            <nav class="nav2">Button</nav>
+            <nav class="nav2">Button</nav>
+            <nav class="nav2"></nav>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var mobileHeader = document.getElementsByClassName("mobileHeader")[0];
+        
+        btn.onclick = function () {
+            modal.style.display = "block";
+            mobileHeader.style.visibility = "hidden";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+            mobileHeader.style.visibility = "visible";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                mobileHeader.style.visibility = "visible";
+            }
+        }
+    </script>
+    <main>
+        <aside class="blackBox">
+            <div class="redBox"></div>
+            <div class="blackOriginal"></div>
+        </aside>
+        <section class="box1">
+            <div class="redV"></div>
+            <div class="blueV"></div>
+        </section>
+        <section class="box2">
+            <div class="darkBlue2"></div>
+            <div class="red2"></div>
+        </section>
+        <article class="TextBox">Free Text Free Text Free Text Free Text</article>
+        <aside class="azure"></aside>
+        <section class="azureBig">
+            <div class="redB"></div>
+            <div class="azureB"></div>
+        </section>
+        </section>
+        <section class="box3">
+            <div class="red"></div>
+            <div class="darkBlue"></div>
+        </section>
+        <section class="box4">
+            <div class="redR"></div>
+            <div class="blue"></div>
+        </section>
+        <section class="verticalBox">
+            <div class="red3"></div>
+            <div class="darkBlue3"></div>
+        </section>
+        <section class="box5">
+            <div class="blue2"></div>
+            <div class="red22"></div>
+        </section>
+        <section class="box6">
+            <div class="azure2"></div>
+            <div class="red23"></div>
+        </section>
+    </main>
+</body>
+
+</html>
